@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOCIAL BOOST</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#080808;color:white;font-family:Arial,sans-serif;line-height:1.6}
+:root{--gold:#e8bd55}
+header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:#111;border-bottom:1px solid #333}
+.logo{font-size:23px;font-weight:bold;color:var(--gold)}
+nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}
+.hero{text-align:center;padding:90px 20px;background:radial-gradient(ellipse,#392b12,#080808 70%)}
+.hero h1{font-size:clamp(38px,7vw,65px);line-height:1.2;margin:20px 0}
+.gold{color:var(--gold)}
+.hero p{color:#ccc;max-width:600px;margin:0 auto 25px}
+.btn{display:inline-block;background:var(--gold);color:#111;padding:12px 23px;border:0;border-radius:7px;text-decoration:none;font-weight:bold;cursor:pointer}
+section{padding:60px 7%}
+.heading{text-align:center;margin-bottom:35px}
+.heading h2{font-size:32px}
+.heading p{color:#aaa}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{background:#151515;border:1px solid #333;border-radius:12px;padding:24px}
+.card:hover{border-color:var(--gold)}
+.card h3{color:var(--gold);margin:10px 0}
+.card p{color:#bbb;font-size:14px}
+.symbol{font-size:30px}
+.about{text-align:center;background:#111}
+.about p{max-width:700px;margin:auto;color:#bbb}
+.formbox{max-width:650px;margin:auto;background:#151515;padding:25px;border-radius:12px;border:1px solid #333}
+label{display:block;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:13px;background:#090909;border:1px solid #444;color:white;border-radius:6px}
+textarea{min-height:90px}
+form button{width:100%;margin-top:20px;font-size:16px}
+.note{text-align:center;color:#999;font-size:12px;margin-top:12px}
+footer{text-align:center;padding:25px;border-top:1px solid #333;color:#aaa}
+@media(max-width:600px){
+header{flex-direction:column;gap:12px}
+nav a{font-size:12px;margin:0 5px}
+.hero{padding:70px 15px}
+section{padding:45px 5%}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">SOCIAL BOOST.</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<p class="gold">YOUR DIGITAL GROWTH PARTNER</p>
+<h1>Build Your Brand.<br><span class="gold">Boost Your Presence.</span></h1>
+<p>Smart social media strategies, creative content and digital solutions to strengthen your online presence.</p>
+<a class="btn" href="#services">Explore Services</a>
+</section>
+
+<section id="services">
+<div class="heading">
+<h2>Our <span class="gold">Services</span></h2>
+<p>Digital solutions for your online growth.</p>
+</div>
+<div class="cards">
+<div class="card"><div class="symbol">◎</div><h3>Instagram</h3><p>Profile optimization, reels strategy and content planning.</p></div>
+<div class="card"><div class="symbol">▶</div><h3>YouTube</h3><p>Channel branding, video SEO and content strategy.</p></div>
+<div class="card"><div class="symbol">f</div><h3>Facebook</h3><p>Page management, creative posts and community building.</p></div>
+<div class="card"><div class="symbol">✈</div><h3>Telegram</h3><p>Channel setup and community management.</p></div>
+<div class="card"><div class="symbol">◉</div><h3>WhatsApp Business</h3><p>Business profile setup and customer communication.</p></div>
+<div class="card"><div class="symbol">✦</div><h3>Other Platforms</h3><p>Digital branding and social media support.</p></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="heading"><h2>Why <span class="gold">SOCIAL BOOST?</span></h2></div>
+<p>We help creators and businesses build a stronger online identity with creative strategies, professional support and social media management.</p>
+</section>
+
+<section id="contact">
+<div class="heading">
+<h2>Start Your <span class="gold">Journey</span></h2>
+<p>Send us your service enquiry.</p>
+</div>
+<div class="formbox">
+<form id="enquiry">
+<label>Your Name</label>
+<input id="name" type="text" required placeholder="Enter your name">
+<label>Select Platform</label>
+<select id="platform" required>
+<option value="">Choose platform</option>
+<option>Instagram</option>
+<option>YouTube</option>
+<option>Facebook</option>
+<option>Telegram</option>
+<option>WhatsApp Business</option>
+<option>Other</option>
+</select>
+<label>Select Service</label>
+<select id="service" required>
+<option value="">Choose service</option>
+<option>Profile Optimization</option>
+<option>Content Strategy</option>
+<option>Social Media Management</option>
+<option>Branding and Design</option>
+<option>Other</option>
+</select>
+<label>Profile Link (optional)</label>
+<input id="link" type="url" placeholder="https://">
+<label>Your Requirements</label>
+<textarea id="details" placeholder="Write your requirements"></textarea>
+<button class="btn" type="submit">Submit Enquiry</button>
+<p class="note">Demo form: orders and payments are not active yet.</p>
+</form>
+</div>
+</section>
+
+<footer>© 2026 <span class="gold">SOCIAL BOOST</span>. All Rights Reserved.</footer>
+
+<script>
+document.getElementById("enquiry").addEventListener("submit",function(e){
+e.preventDefault();
+const message="SOCIAL BOOST Enquiry\nName: "+document.getElementById("name").value+"\nPlatform: "+document.getElementById("platform").value+"\nService: "+document.getElementById("service").value+"\nProfile: "+document.getElementById("link").value+"\nDetails: "+document.getElementById("details").value;
+window.open("https://wa.me/?text="+encodeURIComponent(message),"_blank");
+});
+</script>
+</body>
+  </html>
+  
